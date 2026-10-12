@@ -50,7 +50,7 @@ export async function POST(req: Request) {
     const data = await askJSON<ReviewerSummary>({
       model: MODELS.smart,
       system: SYSTEM,
-      maxTokens: 1000,
+      maxTokens: 6000,
       content: [{ type: "text", text: `Case file:\n${JSON.stringify(context, null, 2)}` }],
     });
     return Response.json({ mode: "live", data });

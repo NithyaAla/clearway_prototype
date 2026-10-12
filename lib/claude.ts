@@ -35,7 +35,7 @@ type Block =
 export async function askJSON<T>(opts: { model: string; system: string; content: Block[]; maxTokens?: number }): Promise<T> {
   const res = await getClient().messages.create({
     model: opts.model,
-    max_tokens: opts.maxTokens ?? 3000,
+    max_tokens: opts.maxTokens ?? 5000,
     // Thinking counts toward max_tokens. These are short, structured tasks, so low effort
     // keeps Claude from spending the whole budget reasoning before it writes the answer.
     output_config: { effort: "low" },

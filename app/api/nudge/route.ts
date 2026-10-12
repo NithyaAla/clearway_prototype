@@ -30,7 +30,7 @@ export async function POST(req: Request) {
       : `${p.name} is running "${p.sale.name}". They pre-cleared up to ${body.envelopeMax}x their normal volume; they are now at ${body.currentMultiple.toFixed(1)}x. Nothing is frozen: settlements continue, but the risk team needs a bit more context. Actions should be: add more evidence (id "evidence"), accept a temporary 10% reserve (id "reserve"), pause ad campaigns (id "pause").`;
 
   try {
-    const data = await askJSON<Nudge>({ model: MODELS.fast, system: SYSTEM, maxTokens: 400, content: [{ type: "text", text: situation }] });
+    const data = await askJSON<Nudge>({ model: MODELS.fast, system: SYSTEM, maxTokens: 2000, content: [{ type: "text", text: situation }] });
     return Response.json({ mode: "live", data });
   } catch (e) {
     return Response.json({ mode: "demo", note: errorNote(e), data: fallback() });

@@ -49,7 +49,7 @@ export async function POST(req: Request) {
       extraction = await askJSON<InvoiceExtraction>({
         model: MODELS.smart,
         system: SYSTEM,
-        maxTokens: 1500,
+        maxTokens: 4000,
         content: [
           {
             type: "image",

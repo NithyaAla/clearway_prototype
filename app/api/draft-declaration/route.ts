@@ -51,7 +51,7 @@ export async function POST(req: Request) {
     const data = await askJSON<Declaration>({
       model: MODELS.smart,
       system: SYSTEM,
-      maxTokens: 800,
+      maxTokens: 4000,
       content: [{ type: "text", text: `Merchant context:\n${JSON.stringify(context, null, 2)}` }],
     });
     return Response.json({ mode: "live", data });
