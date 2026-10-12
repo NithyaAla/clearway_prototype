@@ -12,7 +12,7 @@ export const STEPS: { id: Step; label: string; who: "Merchant" | "Razorpay risk"
   { id: "declare", label: "Declare the sale", who: "Merchant" },
   { id: "evidence", label: "Evidence pack", who: "Merchant" },
   { id: "review", label: "Review and approve", who: "Merchant" },
-  { id: "reviewer", label: "Risk reviewer", who: "Razorpay risk" },
+  { id: "reviewer", label: "Risk reviewer dashboard", who: "Razorpay risk" },
   { id: "live", label: "Live sale", who: "Results" },
   { id: "outcome", label: "Outcome", who: "Results" },
 ];

@@ -71,7 +71,7 @@ export default function Reviewer() {
         <Building2 size={16} /> Internal view: Razorpay risk operations (simulated). The merchant never sees this screen.
       </div>
       <PageHeader
-        eyebrow="Step 5 of 7 · Razorpay risk"
+        eyebrow="Step 5 of 7 · Risk Reviewer Dashboard"
         title={`Pre-clearance request: ${p.legalName}`}
         sub={`${d.sale_name}, ${longDate(d.start_date)} to ${longDate(d.end_date)} · ${p.vertical} · declared ${d.expected_multiple}x average, ${d.peak_multiple}x peak`}
         right={approved ? <Pill tone="green">Pre-cleared</Pill> : <Pill tone="blue">Awaiting decision</Pill>}
