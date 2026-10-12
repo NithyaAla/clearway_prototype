@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+/* ClearWay design tokens. Change the brand scale to re-theme the whole app. */
+@theme {
+  --color-brand-50: #ecfdf6;
+  --color-brand-100: #d1fae8;
+  --color-brand-200: #a7f3d3;
+  --color-brand-300: #6ee7b9;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-navy: #0b1b33;
+  --color-navy-2: #13294b;
+  --color-ink: #0f172a;
+  --color-muted: #5b6475;
+  --color-line: #e3e7ee;
+  --color-canvas: #f5f7fb;
+  --font-sans: ui-sans-serif, -apple-system, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+html,
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.recharts-cartesian-axis-tick-value {
+  font-size: 11px;
+  fill: #6b7280;
+}
