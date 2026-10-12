@@ -26,7 +26,7 @@ export async function POST(req: Request) {
 
   const situation =
     body.scenario === "card_testing"
-      ? `A card-testing attack is hitting ${p.name}'s checkout: hundreds of tiny payments with stolen card numbers per hour. The merchant is the victim. Their pre-cleared sale is unaffected and settlements keep flowing. Suggested protections: a checkout challenge for new cards and a limit on card attempts per device. Actions should be: turn on checkout challenge (id "challenge"), limit card attempts (id "ratelimit"), review later (id "dismiss").`
+      ? `A card-testing attack is hitting ${p.name}'s checkout: hundreds of tiny payments with stolen card numbers per hour. Razorpay's network fraud model (Vulcan) flagged the pattern across merchants; mention this in the message. The merchant is the victim. Their pre-cleared sale is unaffected and settlements keep flowing. Suggested protections: a checkout challenge for new cards and a limit on card attempts per device. Actions should be: turn on checkout challenge (id "challenge"), limit card attempts (id "ratelimit"), review later (id "dismiss").`
       : `${p.name} is running "${p.sale.name}". They pre-cleared up to ${body.envelopeMax}x their normal volume; they are now at ${body.currentMultiple.toFixed(1)}x. Nothing is frozen: settlements continue, but the risk team needs a bit more context. Actions should be: add more evidence (id "evidence"), accept a temporary 10% reserve (id "reserve"), pause ad campaigns (id "pause").`;
 
   try {

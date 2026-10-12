@@ -189,7 +189,7 @@ export function demoNudge(args: { scenario: string; personaId: string; currentMu
   if (args.scenario === "card_testing") {
     return {
       title: "We blocked a card-testing attack on your checkout",
-      message: `Someone is trying hundreds of stolen card numbers with tiny payments. We've marked your account as the victim, not the cause, so your settlements keep flowing. Turning on the checkout challenge stops the attempts within minutes.`,
+      message: `Razorpay's network fraud model (Vulcan) spotted hundreds of stolen card numbers being tried. We've marked your account as the victim, not the cause, so your settlements keep flowing. Turning on the checkout challenge stops the attempts within minutes.`,
       actions: [
         { id: "challenge", label: "Turn on checkout challenge" },
         { id: "ratelimit", label: "Limit card attempts per device" },
